@@ -2,15 +2,11 @@ class Team
   
   attr_accessor :team, :win, :lose, :draw
   
-  def initialize(suffix)
-    team = ["Giants","Tigers","Dragons","BayStars","Carp","Swallows"]
-    win = ["67","60","60","56","52","41"]
-    lose = ["45","53","55","58","56","69"]
-    draw = ["8","7","5","6","12","10"]
-    self.team = team[suffix]
-    self.win =  win[suffix]
-    self.lose = lose[suffix]
-    self.draw = draw[suffix]
+  def initialize(team,win,lose,draw)
+    self.team = team
+    self.win =  win
+    self.lose = lose
+    self.draw = draw
   end 
 
   def calc_win_rate
@@ -23,16 +19,16 @@ class Team
   end 
 end 
 
-Giants =   Team.new(0)
-Tigers =   Team.new(1)
-Dragons =  Team.new(2)
-BayStars = Team.new(3)
-Carp =     Team.new(4)
-Swallows = Team.new(5)
+giants =   Team.new("Giants",67,45,8)
+tigers =   Team.new("Tigers",60,53,7)
+dragons =  Team.new("Dragons",60,55,5)
+bayStars = Team.new("BayStars",56,58,6)
+carp =     Team.new("Carp",52,56,12)
+swallows = Team.new("Swallows",41,69,10)
 
-Giants.show_team_result
-Tigers.show_team_result
-Dragons.show_team_result
-BayStars.show_team_result
-Carp.show_team_result
-Swallows.show_team_result
+giants.show_team_result
+tigers.show_team_result
+dragons.show_team_result
+bayStars.show_team_result
+carp.show_team_result
+swallows.show_team_result
